@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Dashboard_home"
+    android:id="@+id/drawerlayout"
+    android:background="@color/white"
+    tools:ignore="MergeRootFrame"
+    android:orientation="vertical">
+
+<com.google.android.material.navigation.NavigationView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:id="@+id/sidenavview"
+    android:layout_gravity="start"
+    app:headerLayout="@layout/menuheader"
+    app:menu="@menu/slidemenu"/>
+    <!-- TODO: Update blank fragment layout -->
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/menubtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+
+            android:src="@drawable/menubtn" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="100dp"
+            android:layout_toEndOf="@+id/menubtn"
+            android:fontFamily="@font/bungee"
+            android:text="SHREE BRAHMANI TRAVELS"
+            android:textAlignment="center"
+            android:textColor="#6e88f5"
+            android:textSize="26sp"
+            android:transitionName="Text" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/passangerwaiting" />
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You travel , We care !"
+        android:textAlignment="center"
+        android:fontFamily="cursive"
+        android:textSize="24dp"
+        />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="true"
+        android:fadingEdge="vertical"
+        android:fadingEdgeLength="20dp"
+        android:overScrollMode="never"
+        android:requiresFadingEdge="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/hand_wash_safety"
+                    android:layout_width="93dp"
+                    android:layout_height="93dp"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/safety" />
+
+                <TextView
+
+                    android:id="@+id/introducingsafety_txt"
+                    android:layout_width="307dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@+id/hand_wash_safety"
+                    android:fontFamily="@font/baloo"
+                    android:lineHeight="15dp"
+                    android:paddingRight="10dp"
+                    android:text="Introducing safety +"
+                    android:textAlignment="textEnd"
+                    android:textColor="#000000"
+                    android:textSize="28sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/introducingsafety_txt"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="-12dp"
+                    android:layout_marginEnd="0dp"
+                    android:fontFamily="@font/antic"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp"
+                    android:stateListAnimator="@anim/slide_in_left"
+                    android:text="Travel safe with brahmani travels"
+                    android:textAlignment="textEnd"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/thermoscreening"
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/thermometer" />
+
+                <TextView
+
+                    android:id="@+id/thermalScreening_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toStartOf="@+id/thermoscreening"
+                    android:fontFamily="@font/baloo"
+                    android:lineHeight="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Thermal screening"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000"
+                    android:textSize="28sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/thermalScreening_txt"
+                    android:layout_marginTop="-12dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toStartOf="@+id/thermoscreening"
+                    android:fontFamily="@font/antic"
+                    android:paddingLeft="10dp"
+                    android:text="All passengers will undergo thermal screening. Temperature checks for bus drivers and service staff are done before every trip."
+                    android:textAlignment="textStart"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/facemask"
+                    android:layout_width="93dp"
+                    android:layout_height="93dp"
+                    android:layout_marginTop="18dp"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/face_mask" />
+
+                <TextView
+
+                    android:id="@+id/mandatory_mask_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@+id/facemask"
+                    android:fontFamily="@font/baloo"
+                    android:lineHeight="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Mandatroy masks"
+                    android:textAlignment="textEnd"
+                    android:textColor="#000000"
+                    android:textSize="28sp" />
+
+                <TextView
+
+                    android:layout_width="310dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/mandatory_mask_txt"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="-12dp"
+                    android:layout_toEndOf="@+id/facemask"
+                    android:fontFamily="@font/antic"
+                    android:paddingRight="15dp"
+                    android:text="Proper masks are mandatory for all passengers and bus staff."
+                    android:textAlignment="textEnd"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/WhyOnlineBookingbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginEnd="93dp"
+                    android:layout_toStartOf="@+id/aboutus"
+                    android:background="@drawable/round_button_rectangle"
+                    android:fontFamily="@font/baloo"
+                    android:paddingLeft="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="Why online booking?"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/aboutus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/round_button_rectangle"
+                    android:fontFamily="@font/baloo"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="About us"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:layout_width="333dp"
+                    android:layout_height="185dp"
+                    android:src="@drawable/whitepng" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

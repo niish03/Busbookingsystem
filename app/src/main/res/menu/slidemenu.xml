@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+
+
+    <group android:checkableBehavior="single">
+        <item android:title="Interactive">
+
+        <menu>
+            <item
+
+                android:title="Booking"
+                android:id="@+id/booking"
+                android:icon="@drawable/booking"
+                />
+
+        <item
+            android:title="Profile"
+            android:id="@+id/profile"
+            android:icon="@drawable/user"/>
+            <item
+            android:title="Update password"
+            android:id="@+id/updatepassword"
+           android:icon="@drawable/ic_baseline_vpn_key_24"/>
+
+
+        </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Connect">
+
+        <menu>
+
+        <item
+            android:title="Contact us"
+            android:id="@+id/cotactus"
+            android:icon="@drawable/phone"/>
+            <item
+
+                android:title="Contact developer"
+                android:id="@+id/developer"
+                android:icon="@drawable/developer"
+                />
+            <item
+
+                android:title="Submit feedback"
+                android:icon="@drawable/feedback"
+                android:id="@+id/feedbaack"
+                />
+
+        </menu>
+
+        </item>
+    </group>
+
+<group android:checkableBehavior="single">
+
+
+<item
+        android:title="Logout"
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_baseline_reply_24"
+        />
+    <item
+        android:title="Seat manager"
+        android:id="@+id/seatmagaer"
+        android:icon="@drawable/calendar"
+        />
+
+
+</group>
+</menu>

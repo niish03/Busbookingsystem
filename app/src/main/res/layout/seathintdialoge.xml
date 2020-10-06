@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@drawable/whitedencecardboard"
+    android:elevation="10dp"
+   android:layout_gravity="center_horizontal"
+
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/reservedseatid"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+
+       android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/reservedseat" />
+
+    <ImageView
+        android:id="@+id/selectedseatid"
+        android:layout_width="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="40dp"
+       android:layout_alignLeft="@id/reservedseatid"
+        android:layout_below="@id/reservedseatid"
+        android:src="@drawable/selectedseat" />
+
+    <ImageView
+        android:id="@+id/notselectedseat"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="30dp"
+
+        android:layout_alignLeft="@id/selectedseatid"
+        android:layout_below="@id/selectedseatid"
+        android:src="@drawable/notselectedseat" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:layout_alignTop="@id/reservedseatid"
+        android:layout_alignBottom="@id/reservedseatid"
+        android:layout_toEndOf="@+id/reservedseatid"
+        android:fontFamily="@font/montserrat"
+        android:text="Reserved seat"
+        android:textColor="@color/black"
+        android:layout_marginEnd="30dp"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:layout_alignTop="@id/selectedseatid"
+        android:layout_alignBottom="@id/selectedseatid"
+        android:layout_toEndOf="@+id/reservedseatid"
+        android:fontFamily="@font/montserrat"
+        android:text="Selected seat"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:layout_alignTop="@id/notselectedseat"
+        android:layout_alignBottom="@id/notselectedseat"
+        android:layout_toEndOf="@+id/reservedseatid"
+        android:fontFamily="@font/montserrat"
+        android:text="Available seat"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+</RelativeLayout>
+</LinearLayout>

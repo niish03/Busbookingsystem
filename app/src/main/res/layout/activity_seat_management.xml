@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".seatManagement"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:elevation="8dp"
+        android:background="@drawable/welcomescreen_dashboard_down">
+
+
+        <ImageView
+            android:id="@+id/backarrowonupdatedata"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+
+            android:src="@drawable/backarrow"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/backarrowonupdatedata"
+            android:fontFamily="@font/bungee"
+            android:text="Seat management"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+
+
+    </RelativeLayout>
+    <!-- <Button
+        android:id="@+id/setvalues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="228dp"
+        android:text="setvalue"
+        />
+
+    <Button
+        android:id="@+id/resetvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reset"
+       />
+       !-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/blue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Username [Must be your Roll.no:19XX105]"
+                android:transitionName="username_transi"
+                app:counterEnabled="true"
+                app:counterMaxLength="9">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_baseline_account_circle_24"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/updateusername"
+                    android:inputType="text">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/fetchdata"
+    android:text="Fetch user data"
+    android:layout_gravity="center"
+
+    android:textColor="@color/black"
+    android:padding="10dp"
+    android:background="@drawable/whitedencecardboard"
+    android:elevation="10dp"
+    />
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:boxStrokeColor="@color/blue"
+                android:hint="Fullname">
+
+                 <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/facesmile"
+                    android:drawablePadding="5dp"
+                     android:id="@+id/nameupdate"
+                    android:inputType="text">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:boxStrokeColor="@color/blue"
+                android:hint="Branch">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/facesmile"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/updatebranch"
+                    android:inputType="text">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:boxStrokeColor="@color/blue"
+                android:hint="Stand">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/facesmile"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/updatestand"
+                    android:inputType="text">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:boxStrokeColor="@color/blue"
+                android:hint="Year">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/facesmile"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/updateyear"
+                    android:inputType="text">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:boxStrokeColor="@color/blue"
+                android:hint="Pending fees">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/facesmile"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/updatependingfees"
+                    android:inputType="text">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:boxStrokeColor="@color/blue"
+                android:hint="Bus Route [Refer bus pass]"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/facesmile"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/updateroute"
+                    android:inputType="text">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/submitonupdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/curvegradiantblue"
+                android:text="Submit"
+                android:fontFamily="@font/bungee"
+                android:textColor="#fff"
+                 />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:layout_margin="30dp"
+                android:background="@drawable/whitedencecardboard"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select date"
+                    android:fontFamily="@font/montserrat"
+                    android:id="@+id/selectdateupdate"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="12dp"/>
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/calendar"
+                    android:id="@+id/calendariconupdate"
+                    android:onClick="selecdate"
+                    android:layout_marginBottom="20dp"
+                    android:layout_below="@id/selectdateupdate"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/setdatedateupdate"
+                    android:text="19"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:onClick="selecdate"
+
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:layout_toEndOf="@id/calendariconupdate"
+                    android:layout_alignTop="@id/calendariconupdate"
+                    android:layout_alignBottom="@id/calendariconupdate"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/setdatedateupdate"
+                    android:layout_alignTop="@id/setdatedateupdate"
+                    android:layout_alignBottom="@id/setdatedateupdate"
+                    android:layout_marginLeft="5dp"
+                    android:text="Tue,\nAug"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="10dp"
+                    android:id="@+id/day_yearupdate"
+                    android:onClick="selecdate"
+
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/emptyallseat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@color/black"
+                    android:text="Empty all seats" />
+
+
+                <ProgressBar
+                    android:id="@+id/progressonseatmanager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/emptyallseat"
+                    android:layout_alignStart="@+id/emptyallseat"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

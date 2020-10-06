@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bottom_navigation_home"
+        android:icon="@drawable/home_logo"
+        android:title="Home"
+
+        app:cnb_iconColor="#6e88f5"
+        />
+    <item
+        android:id="@+id/BookingTab"
+        android:title="Booking"
+        android:icon="@drawable/booking"
+
+        app:cnb_iconColor="#F44336"/>
+    <item
+        android:id="@+id/profiletab"
+        android:title="Profile"
+        android:icon="@drawable/user"
+        app:cnb_iconColor="#134e6f"/>
+</menu>

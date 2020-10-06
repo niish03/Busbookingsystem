@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Brahmani travels</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="shree_bhrahmani_travels">SHREE BHRAHMANI TRAVELS</string>
+    <string name="todo">TODO</string>
+    <string name="shree_brahmani_travels" />
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gmail_link">mailto:19IT105@charusat.edu.in?subject=Need%20help!&amp;body=Dear%20developer%3C%3E</string>
+    <string name="home" />
+    <string name="profile" />
+    <string name="booking" />
+    <string name="title_activity_otp_verify">otp_verify</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="forget_password_detail">Provide your accounts registered phone number for which you have to reset password</string>
+    <string name="enter_phone_no">Phone no.</string>
+    <string name="Next_btn">NEXT</string>
+    <string name="new_credentials">New Credentials</string>
+    <string name="new_credentials_detail">YOUR IDENTITY HAS BEEN VERIFIED! SET YOUR NEW PASSWORD</string>
+    <string name="passsword_update">YOUR PASSWORD IS SUCCESSFULLY CHANGED</string>
+</resources>

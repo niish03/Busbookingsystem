@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_manager"
+    app:startDestination="@id/dashboard_home">
+
+    <fragment
+        android:id="@+id/dashboard_home"
+        android:name="com.shreebrahmanitravels.app.Dashboard_home"
+        android:label="fragment_dashboard_home"
+        tools:layout="@layout/fragment_dashboard_home" >
+        <action
+            android:id="@+id/action_dashboard_home_to_dashboard_booking"
+            app:destination="@id/dashboard_booking"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_in_right" />
+        <action
+            android:id="@+id/action_dashboard_home_to_dashboard_profile"
+            app:destination="@id/dashboard_profile"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_in_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboard_booking"
+        android:name="com.shreebrahmanitravels.app.dashboard_booking"
+        android:label="fragment_dashboard_booking"
+        tools:layout="@layout/fragment_dashboard_booking" >
+        <action
+            android:id="@+id/action_dashboard_booking_to_dashboard_profile"
+            app:destination="@id/dashboard_profile"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_in_right" />
+        <action
+            android:id="@+id/action_dashboard_booking_to_dashboard_home"
+            app:destination="@id/dashboard_home"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboard_profile"
+        android:name="com.shreebrahmanitravels.app.dashboard_profile"
+        android:label="fragment_dashboard_profile"
+        tools:layout="@layout/fragment_dashboard_profile" >
+        <action
+            android:id="@+id/action_dashboard_profile_to_dashboard_booking"
+            app:destination="@id/dashboard_booking"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_in_left" />
+        <action
+            android:id="@+id/action_dashboard_profile_to_dashboard_home"
+            app:destination="@id/dashboard_home"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_in_left" />
+    </fragment>
+</navigation>

@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Confirmticket">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:elevation="8dp"
+
+        android:background="@drawable/welcomescreen_dashboard_down">
+        <ImageView
+            android:id="@+id/backarrow"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/backarrow"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@id/backarrow"
+            android:fontFamily="@font/bungee"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:text="Confirm Ticket"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+    </RelativeLayout>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Select your preferable seat"
+    android:textSize="16sp"
+    android:fontFamily="@font/montserrat"
+    android:textColor="@color/black"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:id="@+id/selectpreferableseattext"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="On confirming ticket no changes will be made."
+        android:textSize="16sp"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        />
+<ImageView
+    android:layout_width="27dp"
+    android:layout_height="27dp"
+    android:src="@drawable/info"
+    android:layout_gravity="end"
+    android:layout_marginEnd="20dp"
+    android:id="@+id/infoicon"
+    android:layout_marginTop="20dp"
+    />
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:background="@drawable/border"
+android:layout_marginStart="40dp"
+    android:layout_marginTop="30dp"
+android:layout_marginEnd="40dp"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+
+
+        android:layout_above="@id/R11"
+
+        android:layout_alignEnd="@+id/R13"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/steeringwheel" />
+
+    <ImageView
+        android:id="@+id/L11"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:rotation="180"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/notselectedseat"
+/>
+
+    <ImageView
+        android:id="@+id/L12"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:tag="false"
+        android:layout_alignTop="@+id/L11"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/L11"
+        android:onClick="Onselectedseat"
+
+        android:rotation="180"
+        android:src="@drawable/notselectedseat" />
+
+ <ImageView
+        android:id="@+id/R13"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_alignTop="@+id/L11"
+     android:tag="false"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/R12"
+     android:onClick="Onselectedseat"
+     android:layout_marginEnd="20dp"
+        android:rotation="180"
+        android:src="@drawable/notselectedseat" />
+
+
+    <ImageView
+        android:id="@+id/L21"
+        android:rotation="180"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="27dp"
+        android:tag="false"
+        android:layout_height="27dp"
+        android:layout_below="@id/L11"
+        android:onClick="Onselectedseat"
+        android:src="@drawable/notselectedseat"
+        />
+
+    <ImageView
+        android:id="@+id/L22"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:layout_below="@id/L12"
+
+android:layout_toEndOf="@id/L21"
+        android:layout_marginStart="10dp"
+        android:layout_alignTop="@id/L21"
+        android:rotation="180"
+        android:src="@drawable/notselectedseat" />
+
+    <ImageView
+        android:id="@+id/R23"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_alignTop="@+id/L21"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/R22"
+android:layout_below="@id/R13"
+        android:rotation="180"
+        android:src="@drawable/notselectedseat" />
+
+
+    <ImageView
+        android:id="@+id/L31"
+        android:rotation="180"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_below="@id/L21"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:src="@drawable/notselectedseat"
+        />
+
+    <ImageView
+        android:id="@+id/L32"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+
+        android:layout_below="@id/L22"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:layout_toEndOf="@id/L31"
+        android:layout_marginStart="10dp"
+        android:layout_alignTop="@id/L31"
+        android:rotation="180"
+        android:src="@drawable/notselectedseat" />
+
+    <ImageView
+        android:id="@+id/R33"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_alignTop="@+id/L31"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/R32"
+        android:layout_below="@id/R23"
+        android:rotation="180"
+        android:src="@drawable/notselectedseat" />
+
+
+    <ImageView
+        android:id="@+id/L41"
+        android:rotation="180"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_below="@id/L31"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:src="@drawable/notselectedseat"
+        />
+
+    <ImageView
+        android:id="@+id/L42"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+
+        android:layout_below="@id/L32"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:layout_toEndOf="@id/L41"
+        android:layout_marginStart="10dp"
+        android:layout_alignTop="@id/L41"
+        android:rotation="180"
+        android:src="@drawable/notselectedseat" />
+
+    <ImageView
+        android:id="@+id/R43"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_alignTop="@+id/L41"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/R42"
+        android:layout_below="@id/R33"
+        android:rotation="180"
+        android:src="@drawable/notselectedseat" />
+
+    <ImageView
+        android:id="@+id/L51"
+        android:rotation="180"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_below="@id/L41"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:src="@drawable/notselectedseat"
+        />
+
+    <ImageView
+        android:id="@+id/L52"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:layout_below="@id/L42"
+
+        android:layout_toEndOf="@id/L51"
+        android:layout_marginStart="10dp"
+        android:layout_alignTop="@id/L51"
+        android:rotation="180"
+        android:src="@drawable/notselectedseat" />
+
+    <ImageView
+        android:id="@+id/R53"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_alignTop="@+id/L51"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/R52"
+        android:layout_below="@id/R43"
+        android:rotation="180"
+        android:src="@drawable/notselectedseat" />
+
+
+    <ImageView
+        android:id="@+id/L61"
+        android:rotation="180"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_below="@id/L51"
+android:layout_marginBottom="30dp"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:src="@drawable/notselectedseat"
+        />
+
+    <ImageView
+        android:id="@+id/L62"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:layout_below="@id/L52"
+
+        android:layout_toEndOf="@id/L61"
+        android:layout_marginStart="10dp"
+        android:layout_alignTop="@id/L61"
+        android:rotation="180"
+        android:src="@drawable/notselectedseat" />
+
+    <ImageView
+        android:id="@+id/R63"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_alignTop="@+id/L61"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/R62"
+        android:layout_below="@id/R53"
+        android:rotation="180"
+        android:src="@drawable/notselectedseat" />
+
+
+<ImageView
+    android:id="@+id/R11"
+    android:layout_width="27dp"
+    android:layout_height="27dp"
+    android:src="@drawable/notselectedseat"
+    android:rotation="180"
+    android:tag="false"
+    android:onClick="Onselectedseat"
+    android:layout_alignTop="@id/L11"
+    android:layout_toEndOf="@id/L12"
+    android:layout_marginStart="50dp"
+    />
+
+    <ImageView
+        android:id="@+id/R12"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/notselectedseat"
+        android:rotation="180"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:layout_alignTop="@id/L11"
+        android:layout_toEndOf="@id/R11"
+        android:layout_marginStart="10dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/R21"
+        android:layout_width="27dp"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:layout_height="27dp"
+        android:src="@drawable/notselectedseat"
+        android:rotation="180"
+        android:layout_alignTop="@id/L21"
+        android:layout_toEndOf="@id/L22"
+        android:layout_marginStart="50dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/R22"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        android:src="@drawable/notselectedseat"
+        android:rotation="180"
+        android:layout_alignTop="@id/L22"
+        android:layout_toEndOf="@id/R21"
+        android:layout_marginStart="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/R31"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/notselectedseat"
+        android:rotation="180"
+        android:layout_alignTop="@id/L31"
+        android:layout_toEndOf="@id/L32"
+        android:layout_marginStart="50dp"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        />
+
+    <ImageView
+        android:id="@+id/R32"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/notselectedseat"
+        android:rotation="180"
+        android:layout_alignTop="@id/L32"
+        android:layout_toEndOf="@id/R31"
+        android:layout_marginStart="10dp"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        />
+
+    <ImageView
+        android:id="@+id/R41"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/notselectedseat"
+        android:rotation="180"
+        android:layout_alignTop="@id/L41"
+        android:layout_toEndOf="@id/L42"
+        android:layout_marginStart="50dp"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        />
+
+    <ImageView
+        android:id="@+id/R42"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/notselectedseat"
+        android:rotation="180"
+        android:layout_alignTop="@id/L42"
+        android:layout_toEndOf="@id/R41"
+        android:layout_marginStart="10dp"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        />
+
+    <ImageView
+        android:id="@+id/R51"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/notselectedseat"
+        android:rotation="180"
+        android:layout_alignTop="@id/L51"
+        android:layout_toEndOf="@id/L52"
+        android:layout_marginStart="50dp"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+
+        />
+
+    <ImageView
+        android:id="@+id/R52"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/notselectedseat"
+        android:rotation="180"
+        android:layout_alignTop="@id/L52"
+        android:layout_toEndOf="@id/R51"
+        android:layout_marginStart="10dp"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        />
+
+    <ImageView
+        android:id="@+id/R61"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/notselectedseat"
+        android:rotation="180"
+        android:layout_alignTop="@id/L61"
+        android:layout_toEndOf="@id/L62"
+        android:layout_marginStart="50dp"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+
+        />
+
+    <ImageView
+        android:id="@+id/R62"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/notselectedseat"
+        android:rotation="180"
+        android:layout_alignTop="@id/L62"
+        android:layout_toEndOf="@id/R61"
+        android:layout_marginStart="10dp"
+        android:tag="false"
+        android:onClick="Onselectedseat"
+        />
+
+</RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curvegradiantblue"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Confirm ticket"
+        android:id="@+id/confirmticket"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/bungee"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        />
+
+</LinearLayout>

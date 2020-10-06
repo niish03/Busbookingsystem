@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="330dp"
+    android:layout_height="500dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="#fff"
+    >
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+
+        android:padding="5dp"
+        android:src="@drawable/cancleicon"
+        android:id="@+id/canclebtnoninterneterror"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_gravity="top"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:text="Opps!"
+        android:textAlignment="center"
+
+
+        android:textColor="@color/black"
+        android:textSize="40dp" />
+</RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:fontFamily="@font/baloo"
+        android:gravity="center"
+        android:text="No Internet connection!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+
+
+        />
+<ImageView
+    android:layout_width="250dp"
+    android:layout_height="250dp"
+    android:layout_gravity="center"
+    android:src="@drawable/error_wifi"
+/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:fontFamily="@font/baloo"
+        android:gravity="center"
+        android:text="Something wrong with your Internet!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+
+
+        />
+
+    <Button
+        android:id="@+id/retrybtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/round_button_rectangle"
+        android:gravity="center"
+        android:text="RETRY"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:layout_marginBottom="20dp"/>
+
+</LinearLayout>

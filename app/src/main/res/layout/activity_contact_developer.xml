@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contact_developer"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:elevation="8dp"
+        android:background="@drawable/welcomescreen_dashboard_down">
+
+
+        <ImageView
+
+            android:id="@+id/backarrowondeveloper"
+            android:layout_width="37dp"
+            android:layout_centerVertical="true"
+            android:layout_height="37dp"
+
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/backarrow"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/backarrowondeveloper"
+            android:fontFamily="@font/bungee"
+            android:text="Developer"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:textSize="23dp" />
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:id="@+id/coder"
+        android:layout_width="match_parent"
+        android:layout_height="193dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/coder" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <ImageView
+            android:id="@+id/nishitdeveloper"
+            android:layout_width="117dp"
+            android:layout_height="139dp"
+            android:layout_marginStart="@dimen/paddingSmall"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/nishitaboutus" />
+
+
+        <TextView
+            android:id="@+id/nishittxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nishitdeveloper"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="-8dp"
+            android:fontFamily="@font/antic"
+            android:text="Nishit Patel\n19IT105"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/selftext1"
+            android:layout_width="244dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="12dp"
+            android:layout_toEndOf="@+id/nishitdeveloper"
+            android:fontFamily="@font/antic"
+            android:freezesText="true"
+            android:text="Hello from a technocrate person with an i-7 core mind processor. \n\nNow Imagine a person with Skils of \nAndroid studio, \nUI/UX designing ,\nGraphic designing, \nPhotography and \nvideo editing \nOhh ! Now Stop imaging that person, He is in front of you. "
+            android:textAlignment="viewStart"
+
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/antic"
+            android:text="Want me to work for you ?\nWant to collab in an open source project?\nContact me below."
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_below="@+id/selftext1"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/selftext2"
+            android:textStyle="bold" />
+
+<ImageView
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_below="@id/selftext2"
+   android:layout_centerInParent="true"
+    android:layout_marginTop="20dp"
+    android:tag="https://www.instagram.com/niish.03/"
+    android:id="@+id/instagramicon"
+    android:onClick="openbrowser"
+    android:src="@drawable/instagram"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@id/selftext2"
+            android:layout_toStartOf="@id/instagramicon"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/linkdinicon"
+            android:onClick="openbrowser"
+            android:tag="https://www.linkedin.com/in/nishit-patel-69370a1a2/"
+            android:src="@drawable/linkedin"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@id/selftext2"
+            android:layout_toStartOf="@id/linkdinicon"
+            android:layout_marginRight="15dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:onClick="openbrowser"
+            android:tag="https://github.com/niish03"
+            android:src="@drawable/github"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@id/selftext2"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/customericon"
+            android:onClick="opencaller"
+            android:layout_toEndOf="@id/instagramicon"
+            android:src="@drawable/customerservice"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@id/selftext2"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/customericon"
+            android:tag="@string/gmail_link"
+            android:onClick="openbrowser"
+            android:src="@drawable/gmail"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

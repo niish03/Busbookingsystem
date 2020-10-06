@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "679995591486",
+    "firebase_url": "https://shree-brahmani-travels.firebaseio.com",
+    "project_id": "shree-brahmani-travels",
+    "storage_bucket": "shree-brahmani-travels.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679995591486:android:de409a0ac5b9007cafba6f",
+        "android_client_info": {
+          "package_name": "com.shreebrahmanitravels.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "679995591486-76eu9f0i2o2ktc71a2n8pojoj9e8p0hm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBalTYgneuCfiS4WszVrXJl-COyc6jm3VU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "679995591486-76eu9f0i2o2ktc71a2n8pojoj9e8p0hm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feedback"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:elevation="8dp"
+        android:background="@drawable/welcomescreen_dashboard_down">
+
+
+        <ImageView
+            android:id="@+id/backarrowonfeedback"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+
+            android:src="@drawable/backarrow"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/backarrowonfeedback"
+            android:fontFamily="@font/bungee"
+            android:text="Feedback"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="153dp"
+        android:src="@drawable/feedbackimage"
+        android:layout_marginTop="30dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/whitedencecardboard"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        >
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leave feedback"
+            android:fontFamily="@font/baloo"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slide to give feedback"
+            android:fontFamily="@font/antic"
+            android:layout_marginTop="-10dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center"/>
+
+        <com.hsalf.smileyrating.SmileyRating
+            android:id="@+id/smile_ratingid"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content"
+            />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:baselineAligned="false"
+            android:background="@drawable/offwhitecard"
+            android:outlineProvider="none"
+
+            android:id="@+id/msgfeedback"
+            android:hint="How we can improve? "
+            app:boxBackgroundMode="none"
+app:boxStrokeColor="@color/black"
+            android:layout_margin="20dp"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:gravity="top"
+
+android:background="@null"
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="@dimen/paddingSmall"
+android:id="@+id/submitfeedback"
+            android:background="@drawable/round_button_rectangle"
+            android:text="Submit feedback"
+            android:textColor="@color/white"
+            android:fontFamily="@font/baloo"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
