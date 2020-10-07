@@ -39,6 +39,15 @@
 
 
     </RelativeLayout>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -46,4 +55,16 @@
         android:src="@drawable/whyonlinepng"
         android:layout_marginTop="30dp"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/antic"
+        android:textSize="17sp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="1) Have you ever gone to your boarding point and realized that there’s no vacant seat for you?\n\n2) Now you did not have to worry about how and where you will get your seat, We are here to take care about your favourable seat\n\n3) You don’t have to rush and go manually to book seat because you already made your special arrangement by own on your fingertips by M-booking.\n\n4) The M-ticket initiative by us can be a game-changer in countless ways. Not only did it put an end to the physical form of a ID CARD but it also ensured that passengers didn’t have to rush back home in case they didn’t have their ID CARD , also have chill pill about seat and also have sorted track record of fee payment.\n\n\n Note : Return ticket will automatic generated with the same Bus route and seat ID."
+/>
+    </LinearLayout>
+    </ScrollView>
 </LinearLayout>
