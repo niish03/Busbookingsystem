@@ -20,7 +20,7 @@ MEET OUR APPLICATION
 
  Bus booking promo video : https://drive.google.com/file/d/1zN_QOOimWFJXCqRF6Fkm6EAfisN7dqR8/view?usp=sharing
  
- Latest Apk : https://drive.google.com/file/d/1NNAhS_-Jb0PR8STvc76Mdl5shI5tqK4_/view?usp=sharing
+ Latest Apk : https://drive.google.com/file/d/1HLiPCsMBlUQea6zGU3L6v89UmnBAh4e6/view?usp=sharing
  
 
 
