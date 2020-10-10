@@ -17,7 +17,14 @@ MEET OUR APPLICATION
 •       You can choose your preferred seats.
 •       Online bus ticket booking keeps you away from the long queues of the offline booking seat.
 •       You can choose the preferred bus pick-up and dropping points and timings.
+
+ Bus booking promo video : https://drive.google.com/file/d/1zN_QOOimWFJXCqRF6Fkm6EAfisN7dqR8/view?usp=sharing
  
+ Latest Apk : https://drive.google.com/file/d/1NNAhS_-Jb0PR8STvc76Mdl5shI5tqK4_/view?usp=sharing
+ 
+
+
+
 
 1) Getting window seat
 
