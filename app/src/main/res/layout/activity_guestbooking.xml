@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:elevation="8dp"
+        android:background="@drawable/welcomescreen_dashboard_down">
+
+
+        <ImageView
+            android:id="@+id/backarrrowonboard"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+
+            android:src="@drawable/backarrow"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/backarrrowonboard"
+            android:fontFamily="@font/bungee"
+            android:text="On board booking"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:layout_margin="30dp"
+        android:background="@drawable/whitedencecardboard"
+        >
+
+        <TextView
+            android:id="@+id/vacantseat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat"
+
+            android:text="Total no. of vacant seat"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vacantedit"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Bus route"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/vacantedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_alignTop="@id/vacantseat"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat"
+            android:layout_toEndOf="@id/vacantseat"
+            android:text=": Fetching data...."/>
+
+        <TextView
+            android:id="@+id/busrouteeditt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vacantedit"
+            android:layout_marginTop="7dp"
+            android:layout_alignLeft="@id/vacantedit"
+            android:fontFamily="@font/montserrat"
+            android:text=": BUS1"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black" />
+
+
+    </RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:padding="15dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameguest"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:boxStrokeColor="@color/blue"
+        android:hint="Fullname">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/facesmile"
+            android:drawablePadding="5dp"
+            android:inputType="text">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Usernameguest"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Username [Must be your Roll.no:19XX105]"
+        android:transitionName="username_transi"
+        app:counterEnabled="true"
+        app:counterMaxLength="9">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_account_circle_24"
+            android:drawablePadding="5dp"
+            android:inputType="text">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phonenumberguest"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Phone number"
+        app:counterEnabled="true"
+        app:counterMaxLength="10">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/phone"
+            android:drawablePadding="5dp"
+            android:inputType="number|phone">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/confirmticketguest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/round_button_rectangle"
+        android:text="Request ticket"
+        android:textColor="#fff"
+        android:transitionName="button_tran" />
+
+</LinearLayout>
+</LinearLayout>

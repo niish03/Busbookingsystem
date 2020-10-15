@@ -31,6 +31,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
@@ -38,7 +39,7 @@ import java.util.concurrent.TimeUnit;
 public class otp_verify extends AppCompatActivity {
     FirebaseDatabase Rootnote;
     DatabaseReference reference;
-    public static final int MY_PERMISSIONS_REQUEST_SEND_SMS=1;
+    public static final int MY_PERMISSIONS_REQUEST_SEND_SMS = 1;
     String codebysystem;
     Button next_btn;
     TextView OTP_entered_byuser;
@@ -48,10 +49,10 @@ public class otp_verify extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp_verify);
-        progressBar=findViewById(R.id.pgbar);
+        progressBar = findViewById(R.id.pgbar);
         progressBar.setVisibility(View.INVISIBLE);
-        next_btn=(Button)findViewById(R.id.nxt_btn);
-        OTP_entered_byuser=findViewById(R.id.number_otp_txt);
+        next_btn = (Button) findViewById(R.id.nxt_btn);
+        OTP_entered_byuser = findViewById(R.id.number_otp_txt);
         String phoneNo = getIntent().getStringExtra("phone_no");
         sendverificationCodetouser(phoneNo);
 
@@ -74,10 +75,9 @@ public class otp_verify extends AppCompatActivity {
     }
 
 
-
     private void sendverificationCodetouser(String phoneNO) {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                "+91"+phoneNO,        // Phone number to verify
+                "+91" + phoneNO,        // Phone number to verify
                 60,                 // Timeout duration
                 TimeUnit.SECONDS,   // Unit of timeout
                 TaskExecutors.MAIN_THREAD,               // Activity (for callback binding)
@@ -85,21 +85,19 @@ public class otp_verify extends AppCompatActivity {
     }
 
 
-
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
         @Override
         public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
             super.onCodeSent(s, forceResendingToken);
 
-            codebysystem=s;
+            codebysystem = s;
         }
 
         @Override
         public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
 
-            String code= phoneAuthCredential.getSmsCode();
-            if(code!=null)
-            {
+            String code = phoneAuthCredential.getSmsCode();
+            if (code != null) {
                 progressBar.setVisibility(View.VISIBLE);
                 OTP_entered_byuser.setText(code);
                 verifycode(code);
@@ -109,13 +107,13 @@ public class otp_verify extends AppCompatActivity {
         @Override
         public void onVerificationFailed(@NonNull FirebaseException e) {
 
-            Toast.makeText(otp_verify.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+            Toast.makeText(otp_verify.this, e.getMessage(), Toast.LENGTH_SHORT).show();
 
         }
     };
 
     private void verifycode(String code) {
-        PhoneAuthCredential credential= PhoneAuthProvider.getCredential(codebysystem,code);
+        PhoneAuthCredential credential = PhoneAuthProvider.getCredential(codebysystem, code);
         signInTheUserByCredentials(credential);
 
     }
@@ -132,14 +130,32 @@ public class otp_verify extends AppCompatActivity {
 
                         if (task.isSuccessful()) {
 
-                            Toast.makeText(otp_verify.this, "Your Account has been created successfully!", Toast.LENGTH_SHORT).show();
 
-                            //Perform Your required action here to either let the user sign In or do something required
-                            registeruser();
-                            Intent intent = new Intent(otp_verify.this, login.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                            startActivity(intent);
+                            if (new sessionmanager(otp_verify.this).getuserdetail().equals("Guest user")) {
+                                Rootnote = FirebaseDatabase.getInstance();
+                                reference = Rootnote.getReference("Guest");
+                                Calendar calendar = Calendar.getInstance();
+                                calendar.add(Calendar.DAY_OF_YEAR, 1);
+                                Date tomorrow = calendar.getTime();
 
+                                final String tommorowdate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(tomorrow);
+
+                                reference.child(tommorowdate).child(getIntent().getStringExtra("username")).child("PhoneNo").setValue(getIntent().getStringExtra("phone_no"));
+                                reference.child(tommorowdate).child(getIntent().getStringExtra("username")).child("Name").setValue(getIntent().getStringExtra("fullname"));
+                                reference.child(tommorowdate).child(getIntent().getStringExtra("username")).child("busroute").setValue(getIntent().getStringExtra("busroute"));
+
+                                Intent intent = new Intent(otp_verify.this,bookedsuccesfully.class);
+                                startActivity(intent);
+
+                            } else {
+                                Toast.makeText(otp_verify.this, "Your Account has been created successfully!", Toast.LENGTH_SHORT).show();
+
+                                //Perform Your required action here to either let the user sign In or do something required
+                                registeruser();
+                                Intent intent = new Intent(otp_verify.this, login.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                startActivity(intent);
+                            }
                         } else {
                             OTP_entered_byuser.setError("Wrong OTP");
                             progressBar.setVisibility(View.INVISIBLE);
@@ -150,7 +166,7 @@ public class otp_verify extends AppCompatActivity {
 
     private void registeruser() {
         Rootnote = FirebaseDatabase.getInstance();
-        reference= Rootnote.getReference("users");
+        reference = Rootnote.getReference("users");
 
 
         String phoneNo = getIntent().getStringExtra("phone_no");
@@ -159,8 +175,8 @@ public class otp_verify extends AppCompatActivity {
         String password = getIntent().getStringExtra("password");
         String bus_no = getIntent().getStringExtra("bus_no");
 
-        user_helper USER_HELPER= new user_helper(name,username,phoneNo,password,bus_no);
-        String currentdate =new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+        user_helper USER_HELPER = new user_helper(name, username, phoneNo, password, bus_no);
+        String currentdate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
         reference.child(username).setValue(USER_HELPER);
         reference.child(username).child("seat").child(currentdate).child("seat ID").setValue("null");
         reference.child(username).child("branch").setValue("Not Registered");
@@ -168,8 +184,9 @@ public class otp_verify extends AppCompatActivity {
         reference.child(username).child("pendingfees").setValue("NILL");
         reference.child(username).child("currentyear").setValue("Jan-Jun 2020");
     }
+
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
@@ -185,8 +202,8 @@ public class otp_verify extends AppCompatActivity {
             }
         });
 
-            AlertDialog alertDialog = builder.create();
-            alertDialog.show();
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 
 }

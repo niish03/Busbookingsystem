@@ -14,6 +14,7 @@ import android.content.Intent;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Pair;
 import android.view.View;
 
@@ -22,7 +23,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -30,6 +34,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class login extends AppCompatActivity {
     ImageView busimage;
@@ -38,6 +43,7 @@ public class login extends AppCompatActivity {
     Button Go_onLOGIN, new_userbtn;
     ProgressBar progressBar;
     TextView forgetPasswordtxt;
+    TextView skipsignup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +61,7 @@ public class login extends AppCompatActivity {
         new_userbtn = findViewById(R.id.signupbuttononlogin);
         progressBar = findViewById(R.id.loading);
         progressBar.setVisibility(View.INVISIBLE);
-
+        skipsignup=findViewById(R.id.skipsignup);
 
         forgetPasswordtxt = findViewById(R.id.ForgetText);
 
@@ -112,9 +118,16 @@ public class login extends AppCompatActivity {
 
             }
         });
-
+skipsignup.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        startActivity(new Intent(login.this,guestwarning.class));
+    }
+});
 
     }
+
+
 
     @Override
     public void onBackPressed() {

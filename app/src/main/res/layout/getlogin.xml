@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_image_icon"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:src="@drawable/inviteuser"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:text="Uhh... Ohh Logged in as Guest.\n Login or sign-up to continue"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        >
+    <Button
+        android:id="@+id/loginbtninvite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curvegradiantblue"
+        android:text="Login"
+        android:fontFamily="@font/bungee"
+        android:textColor="@color/white"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginRight="30dp"
+        />
+
+    <Button
+        android:id="@+id/signupbuttoninvite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curvegradiantblue"
+        android:text="Sign-up"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/bungee"
+        android:textColor="@color/white"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        />
+    </LinearLayout>
+</LinearLayout>

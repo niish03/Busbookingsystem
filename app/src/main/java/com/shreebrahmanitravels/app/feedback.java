@@ -9,6 +9,7 @@ import android.view.View;
 
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -16,6 +17,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.hsalf.smilerating.SmileRating;
 import com.hsalf.smileyrating.SmileyRating;
+
+import java.util.Random;
 
 
 public class feedback extends AppCompatActivity {
@@ -35,7 +38,9 @@ public class feedback extends AppCompatActivity {
         submitfeedback = findViewById(R.id.submitfeedback);
         backbutton = findViewById(R.id.backarrowonfeedback);
         smileRating = (SmileyRating) findViewById(R.id.smile_ratingid);
-
+        TextView guestnotw = findViewById(R.id.guestnote);
+        if(new sessionmanager(getBaseContext()).getuserdetail().equals("Guest user"))
+            guestnotw.setVisibility(View.VISIBLE);
 
 
         backbutton.setOnClickListener(new View.OnClickListener() {
@@ -64,7 +69,16 @@ public class feedback extends AppCompatActivity {
                     String username = sessionmanagerobj.getuserdetail();
 
                     String message = message_feedback.getEditText().getText().toString();
-                    databaseReference.child(username).setValue("Rating : " + smileRating.getSelectedSmiley().getRating() + "    Message : " + message);
+                    if(sessionmanagerobj.getuserdetail().equals("Guest user"))
+                    {
+
+                        Random random= new Random();
+                        int randomint= random.nextInt(1000);
+                        databaseReference.child("Guest"+randomint).setValue("Rating : " + smileRating.getSelectedSmiley().getRating() + "    Message : " + message);
+
+                    }
+                    else
+                        databaseReference.child(username).setValue("Rating : " + smileRating.getSelectedSmiley().getRating() + "    Message : " + message);
                     message_feedback.getEditText().getText().clear();
                     message_feedback.clearFocus();
 

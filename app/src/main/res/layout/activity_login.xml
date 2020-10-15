@@ -111,7 +111,7 @@
             android:layout_marginBottom="5dp"
             android:transitionName="button_tran"
             android:id="@+id/Go_button_on_login"
-            android:onClick="login"
+           
             />
 
         <Button
@@ -136,7 +136,22 @@
         android:id="@+id/loading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
 
+    <TextView
+        android:id="@+id/skipsignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/baloo"
+        android:text="SKIP SIGN-UP"
+        android:textColor="#757575" />
+</RelativeLayout>
 
 </LinearLayout>
 

@@ -55,9 +55,9 @@ public class Dashboard_home extends Fragment {
     Button aboutus,whyonlinebooking;
     ImageView menubtn;
     TextView headerrollnumber;
+
+
     DrawerLayout drawerLayout;
-
-
     private FragmentActivity myContext;
 
     public Dashboard_home() {
@@ -134,10 +134,19 @@ public class Dashboard_home extends Fragment {
         menu.findItem(R.id.seatmagaer).setVisible(false);
 
         sessionmanager sessionmanagerobj = new sessionmanager(getContext());
-if(sessionmanagerobj.getuserdetail().equals("19IT105"))
+        try
+{
+    if(sessionmanagerobj.getuserdetail().equals("19IT105"))
 {
     menu.findItem(R.id.seatmagaer).setVisible(true);
 }
+    if(sessionmanagerobj.getuserdetail().equals("Guest user"))
+        menu.findItem(R.id.updatepassword).setVisible(false);
+
+}catch (Exception e)
+        {
+            System.out.println(e);
+        }
         View headerview = navigationView.getHeaderView(0);
         headerrollnumber= headerview.findViewById(R.id.usernameonmenubtn);
                 headerrollnumber.setText(sessionmanagerobj.getuserdetail());

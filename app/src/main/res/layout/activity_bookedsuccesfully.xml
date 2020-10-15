@@ -25,7 +25,7 @@
         android:fontFamily="@font/baloo"
         android:gravity="center"
         android:text="Your seat is safe with us !\n Catch you soon"
-
+android:id="@+id/seatsucessmsg"
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
