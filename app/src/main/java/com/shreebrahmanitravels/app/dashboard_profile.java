@@ -85,6 +85,38 @@ public class dashboard_profile extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        if(new sessionmanager(getContext()).getuserdetail().equals("Guest user"))
+        {
+            final Button signup,login;
+            View v = inflater.inflate(R.layout.getlogin,container,false);
+            signup=v.findViewById(R.id.signupbuttoninvite);
+            login=v.findViewById(R.id.loginbtninvite);
+
+            signup.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent= new Intent(getActivity(),signup.class);
+                    sessionmanager sessionmanagerobj= new sessionmanager(requireContext());
+                    sessionmanagerobj.logoutuserfromsession();
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                }
+            });
+            login.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Intent intent= new Intent(getActivity(),login.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    sessionmanager sessionmanagerobj= new sessionmanager(requireContext());
+                    sessionmanagerobj.logoutuserfromsession();
+                    startActivity(intent);
+
+                }
+            });
+            return  v;
+        }
+        else{
         View v = inflater.inflate(R.layout.fragment_dashboard_profile, container, false);
         final AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
 
@@ -181,7 +213,7 @@ public class dashboard_profile extends Fragment {
         };
         requireActivity().getOnBackPressedDispatcher().addCallback(getViewLifecycleOwner(), callback);
 
-        return v;
+        return v;}
     }
 
     private void getdetails() {

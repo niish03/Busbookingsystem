@@ -178,10 +178,10 @@ public class dashboard_booking extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-
-                final String lastbookeddate = new sessionmanager(getContext()).getlastbookeddate();
-
                 try {
+                final String lastbookeddate = new sessionmanager(requireContext()).getlastbookeddate();
+
+
                     if (!Objects.requireNonNull(snapshot.child(username).child("seat").child(lastbookeddate).child("seat ID").getValue()).toString().equals("null")) {
 
                         if (refnew != null && this != null) {
@@ -301,10 +301,10 @@ public class dashboard_booking extends Fragment {
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-
+try
                 //System.out.println(dataSnapshot);
 
-
+{
                 String loginusername = sessionmanagerobj.getuserdetail();
 
                 busnofromdatabase = dataSnapshot.child(loginusername).child("bus_no").getValue().toString();
@@ -312,7 +312,10 @@ public class dashboard_booking extends Fragment {
                 if (ref != null && this != null) {
                     ref.removeEventListener(this);
                 }
-
+}catch (Exception e)
+{
+    System.out.println(e);
+}
             }
 
             @Override
@@ -326,6 +329,11 @@ public class dashboard_booking extends Fragment {
         serchbusbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+
+
+
                 progressBar.setVisibility(View.VISIBLE);
 
                 final AlertDialog[] dialog = {null};
@@ -378,7 +386,14 @@ public class dashboard_booking extends Fragment {
                             progressBar.setVisibility(View.INVISIBLE);
                         }
                     } else {
+                        if(new sessionmanager(getContext()).getuserdetail().equals("Guest user"))
+                            {
+                                Intent intent = new Intent(getActivity(),guestbooking.class);
+                                intent.putExtra("busroute",busroutetext.getText().toString());
+                                startActivity(intent);
 
+                            progressBar.setVisibility(View.INVISIBLE);}
+                        else
                         refnew.addValueEventListener(listener);
                     }
 

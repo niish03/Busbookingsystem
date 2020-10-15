@@ -131,6 +131,14 @@ android:id="@+id/submitfeedback"
             android:fontFamily="@font/baloo"
             android:layout_marginBottom="20dp"/>
 
+        <TextView
+            android:id="@+id/guestnote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            android:text="Note : In case of guest user , Please provide your contact information like (Email, contact number, etc)"/>
+
     </LinearLayout>
 
 </LinearLayout>

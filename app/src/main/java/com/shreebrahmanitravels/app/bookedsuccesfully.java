@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -31,7 +32,6 @@ import java.util.Objects;
 
 public class bookedsuccesfully extends AppCompatActivity {
     Button gohome;
-
     Button tryagain;
 
     @Override
@@ -41,6 +41,24 @@ public class bookedsuccesfully extends AppCompatActivity {
 
         setContentView(R.layout.activity_bookedsuccesfully);
         gohome = findViewById(R.id.gohome_succesbook);
+        TextView sucesstext= findViewById(R.id.seatsucessmsg);
+        gohome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(bookedsuccesfully.this, welcomePage.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+            }
+
+
+        });
+
+
+
+        if(new sessionmanager(this).getuserdetail().equals("Guest user"))
+            sucesstext.setText("Your request is successfully submitted!\n We will contact you to your Registration mobile number on seat confirmation.");
+      else{
+
         AlertDialog dialog = null;
         final AlertDialog.Builder alert = new AlertDialog.Builder(bookedsuccesfully.this);
 
@@ -116,17 +134,8 @@ sessionmanagerobj.setlastbookeddate(tommorowdate);
         Button tryagain = dialog.findViewById(R.id.tryagainonerrorpagebookingseat);
 
 
-        gohome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(bookedsuccesfully.this, welcomePage.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
-            }
 
-
-        });
-
+}
 
     }
 

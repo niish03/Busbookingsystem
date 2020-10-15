@@ -67,7 +67,7 @@
     android:padding="10dp"
     android:textStyle="bold"
     android:textColor="@color/black"
-    android:text="From past 15 years Shri Brahmani travels is providing hassleless transportation services from Ahmedabad to CHARUSAT UNIVERSITY  with it's 10 buses and  4 Volvo buses. \n \nIt is well known for it's comfortability, punctuality and friendly staff. It has been chosen as one of the best travels according to student survey [2019]."/>
+    android:text="From past 15 years CHARUSAT BUS BOOKING is providing hassleless transportation services from Ahmedabad to CHARUSAT UNIVERSITY  with it's 10 buses and  4 Volvo buses. \n \nIt is well known for it's comfortability, punctuality and friendly staff. It has been chosen as one of the best travels according to student survey [2019]."/>
 
 
     <TextView
@@ -81,7 +81,7 @@
         android:textColorLink="@color/blue"
         android:textColor="@color/black"
         android:textIsSelectable="true"
-        android:text="For more details contact : +91-9426753509\nVrundavan Appartment ,\nUttamnagar ,Maninagar ,\nAhmedabad-380050 " />
+        android:text="For more details contact : +91-8128812480\nVrundavan Appartment ,\Maninagar ,\nAhmedabad-380050 " />
 
     <TextView
         android:layout_width="match_parent"

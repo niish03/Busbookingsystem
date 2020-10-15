@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".guestwarning">
+
+    <ImageView
+        android:id="@+id/backarrow"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+
+        android:src="@drawable/backarrow"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/iv_image_icon"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:src="@drawable/onboardbookinh"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.636" />
+
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guest login"
+        app:layout_constraintTop_toBottomOf="@id/iv_image_icon"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/bungee"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="On board booking is an special feature for guest (Non-Commuters) , Specially designed for Hostel people who travel on weekend."
+        app:layout_constraintTop_toBottomOf="@id/tv_heading"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat"
+        android:padding="25dp"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/getstarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curvegradiantblue"
+        android:fontFamily="@font/bungee"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Get started"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:text="Note : Guest signup is only for non-commuters, Students of CHARUSAT bus service have to sign-up completely to generate their Virtual pass. "
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+</androidx.constraintlayout.widget.ConstraintLayout>

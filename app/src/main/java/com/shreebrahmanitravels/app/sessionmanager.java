@@ -43,6 +43,16 @@ public void setlastbookeddate(String date)
     editor.putString("Last date",date);
     editor.commit();
 }
+
+public void setseenwalkthrough(String isseen)
+{
+
+    editor.putString("Seen walkthrough",isseen);
+    editor.commit();
+}
+
+
+public String getseenwalkthrough(){ return sharedPreferences.getString("Seen walkthrough",null);}
 public String getlastbookeddate()
 {
     return sharedPreferences.getString("Last date",null);

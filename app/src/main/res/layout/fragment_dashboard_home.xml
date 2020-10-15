@@ -50,7 +50,7 @@
             android:layout_marginLeft="100dp"
             android:layout_toEndOf="@+id/menubtn"
             android:fontFamily="@font/bungee"
-            android:text="SHREE BRAHMANI TRAVELS"
+            android:text="CHARUSAT BUS BOOKING SYSTEM"
             android:textAlignment="center"
             android:textColor="#6e88f5"
             android:textSize="26sp"
@@ -136,7 +136,7 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="15dp"
                     android:stateListAnimator="@anim/slide_in_left"
-                    android:text="Travel safe with brahmani travels"
+                    android:text="Travel safe with Our travels"
                     android:textAlignment="textEnd"
                     android:textColor="#000000"
                     android:textSize="17sp" />
@@ -277,12 +277,9 @@
                     android:paddingEnd="10dp"
                     android:text="About us"
                     android:textAlignment="center"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="120dp"/>
 
-                <ImageView
-                    android:layout_width="333dp"
-                    android:layout_height="185dp"
-                    android:src="@drawable/whitepng" />
 
             </RelativeLayout>
 
