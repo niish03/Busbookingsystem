@@ -1,4 +1,4 @@
-# Shree_brahmani_travels
+
  
  
 
@@ -8,7 +8,7 @@ This system aims to provide you your tens free means of monitoring a travel jour
 
 The project designed and implemented an interoperability mobile platform with a system based on Android Studio open-source software platform and Firebase open source Database platform, an Android program on the host terminal dealing with reducing chaos and making more comfort to a daily routine “Up-Down wali life” by using technology.
 
-The smartphone is considered an important innovation that has changed human life in several aspects. Android has emerged as the most widely used operating system in Smart Phones. The android operating system is open source and freely accessible to everyone. On the Android operating system, many applications (apps) are available for real-world problem solver - M-Booking App. The present paper discusses the design and development of an Android-based app named as Brahmani Travels. This paper also highlights various challenges faced by developers in Android App Development.
+The smartphone is considered an important innovation that has changed human life in several aspects. Android has emerged as the most widely used operating system in Smart Phones. The android operating system is open source and freely accessible to everyone. On the Android operating system, many applications (apps) are available for real-world problem solver - M-Booking App. The present paper discusses the design and development of an Android-based app named as Charusat bus system. This paper also highlights various challenges faced by developers in Android App Development.
 
 With the cut-throat struggle of person to Book his perfect seat for traveling, we have moved from conventional way of doing it to the M-booking application.
 
