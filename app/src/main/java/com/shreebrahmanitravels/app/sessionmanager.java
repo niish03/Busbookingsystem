@@ -19,12 +19,11 @@ public class sessionmanager {
     String key_password="password";
     public String usernameonprofile;
 
-    sessionmanager()
-    {
-    }
+
     public sessionmanager(Context context){
         sharedPreferences = context.getSharedPreferences(shared_pref_name,Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
+        
 
     }
 

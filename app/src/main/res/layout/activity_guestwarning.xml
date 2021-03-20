@@ -17,6 +17,8 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
     <ImageView
         android:id="@+id/iv_image_icon"
         android:layout_width="350dp"
@@ -77,7 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="bottom"
-        android:text="Note : Guest signup is only for non-commuters, Students of CHARUSAT bus service have to sign-up completely to generate their Virtual pass. "
+        android:text="Note : Guest signup is only for non-commuters, Students of Bus booking system have to sign-up completely to generate their Virtual pass. "
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -67,7 +67,7 @@
     android:padding="10dp"
     android:textStyle="bold"
     android:textColor="@color/black"
-    android:text="From past 15 years CHARUSAT BUS BOOKING is providing hassleless transportation services from Ahmedabad to CHARUSAT UNIVERSITY  with it's 10 buses and  4 Volvo buses. \n \nIt is well known for it's comfortability, punctuality and friendly staff. It has been chosen as one of the best travels according to student survey [2019]."/>
+    android:text="From past 15 years BUS BOOKING SYSTEM is providing hassleless transportation services from Ahmedabad to CHARUSAT UNIVERSITY  with it's 10 buses and  4 Volvo buses. \n \nIt is well known for it's comfortability, punctuality and friendly staff. It has been chosen as one of the best travels according to student survey [2019]."/>
 
 
     <TextView
@@ -81,7 +81,7 @@
         android:textColorLink="@color/blue"
         android:textColor="@color/black"
         android:textIsSelectable="true"
-        android:text="For more details contact : +91-8128812480\nVrundavan Appartment ,\Maninagar ,\nAhmedabad-380050 " />
+        android:text="For more details contact : +91-8128812480\nManinagar ,\nAhmedabad-380008 " />
 
     <TextView
         android:layout_width="match_parent"
@@ -103,14 +103,7 @@
 
             android:src="@drawable/nishitaboutus" />
 
-        <ImageView
-            android:id="@+id/breezeaboutus"
-            android:layout_width="117dp"
 
-            android:layout_height="139dp"
-            android:layout_marginStart="20dp"
-            android:layout_toEndOf="@+id/nishitaboutus"
-            android:src="@drawable/breezeaboutus" />
 
         <TextView
             android:id="@+id/nishit"
@@ -128,22 +121,7 @@
             android:fontFamily="@font/antic"
             android:textAlignment="center"
             android:text="Nishit Patel\n19IT105"/>
-        <TextView
-            android:id="@+id/breeze"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/breezeaboutus"
-            android:layout_alignStart="@+id/breezeaboutus"
-            android:layout_alignEnd="@+id/breezeaboutus"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="-5dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="0dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/antic"
-            android:textAlignment="center"
-            android:text="Breeze Patel\n19IT087" />
+       
 
 
     </RelativeLayout>

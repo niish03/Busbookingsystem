@@ -106,7 +106,7 @@ reference.removeEventListener(this);
 
                 if(!validateUsername() | ! validphonenumber() | !validateName())
                     return;
-                Intent intent= new Intent(guestbooking.this, otp_verify.class);
+                Intent intent= new Intent(guestbooking.this, verifyotp_guestbooking.class);
                 intent.putExtra("fromguest","true");
                 intent.putExtra("fullname",fullname.getEditText().getText().toString());
                 intent.putExtra("username",username.getEditText().getText().toString());

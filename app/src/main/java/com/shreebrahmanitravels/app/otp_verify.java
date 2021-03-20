@@ -131,23 +131,7 @@ public class otp_verify extends AppCompatActivity {
                         if (task.isSuccessful()) {
 
 
-                            if (new sessionmanager(otp_verify.this).getuserdetail().equals("Guest user")) {
-                                Rootnote = FirebaseDatabase.getInstance();
-                                reference = Rootnote.getReference("Guest");
-                                Calendar calendar = Calendar.getInstance();
-                                calendar.add(Calendar.DAY_OF_YEAR, 1);
-                                Date tomorrow = calendar.getTime();
 
-                                final String tommorowdate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(tomorrow);
-
-                                reference.child(tommorowdate).child(getIntent().getStringExtra("username")).child("PhoneNo").setValue(getIntent().getStringExtra("phone_no"));
-                                reference.child(tommorowdate).child(getIntent().getStringExtra("username")).child("Name").setValue(getIntent().getStringExtra("fullname"));
-                                reference.child(tommorowdate).child(getIntent().getStringExtra("username")).child("busroute").setValue(getIntent().getStringExtra("busroute"));
-
-                                Intent intent = new Intent(otp_verify.this,bookedsuccesfully.class);
-                                startActivity(intent);
-
-                            } else {
                                 Toast.makeText(otp_verify.this, "Your Account has been created successfully!", Toast.LENGTH_SHORT).show();
 
                                 //Perform Your required action here to either let the user sign In or do something required
@@ -155,7 +139,9 @@ public class otp_verify extends AppCompatActivity {
                                 Intent intent = new Intent(otp_verify.this, login.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
-                            }
+
+
+
                         } else {
                             OTP_entered_byuser.setError("Wrong OTP");
                             progressBar.setVisibility(View.INVISIBLE);

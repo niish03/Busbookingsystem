@@ -50,8 +50,9 @@
             android:layout_marginLeft="100dp"
             android:layout_toEndOf="@+id/menubtn"
             android:fontFamily="@font/bungee"
-            android:text="CHARUSAT BUS BOOKING SYSTEM"
+            android:text="BUS BOOKING SYSTEM"
             android:textAlignment="center"
+            android:layout_marginTop="5dp"
             android:textColor="#6e88f5"
             android:textSize="26sp"
             android:transitionName="Text" />
