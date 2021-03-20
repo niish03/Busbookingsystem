@@ -17,6 +17,7 @@ MEET OUR APPLICATION
 •       You can choose your preferred seats.
 •       Online bus ticket booking keeps you away from the long queues of the offline booking seat.
 •       You can choose the preferred bus pick-up and dropping points and timings.
+•       Skip signup/login for guest users(Non commuters). Book seat easily.(If seat is available. Preferance first to regular students.)
 
  Bus booking promo video : https://drive.google.com/file/d/1zN_QOOimWFJXCqRF6Fkm6EAfisN7dqR8/view?usp=sharing
  
@@ -108,19 +109,11 @@ Upcoming features
 
 Coming up with features like
 
-•       On board booking
-
-•       This type of booking applies to non-commuters, those who are not traveling on daily basis.
-
-•       They can directly book their seat in a pending confirmation, They can get confirmation by early morning about seat confirmation.
 
 •       Total number of vacant seats
 
 •       Manager can get easily no of vacant seats.
 
-•       Guest login
-
-•       Non commuters can skip the signing process by guest mode.
 
 Contact us.
 Nishit Patel (19IT105)    
