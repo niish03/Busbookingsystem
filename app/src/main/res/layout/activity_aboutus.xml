@@ -2,132 +2,161 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/aboutusactivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Aboutus"
     android:orientation="vertical"
-    android:id="@+id/aboutusactivity">
+    tools:context=".Aboutus">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="57dp"
-        android:elevation="8dp"
-        android:background="@drawable/welcomescreen_dashboard_down">
+        android:background="@drawable/welcomescreen_dashboard_down"
+        android:elevation="8dp">
 
 
         <ImageView
             android:id="@+id/backarrow"
             android:layout_width="37dp"
             android:layout_height="37dp"
-            android:layout_marginStart="10dp"
             android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
             android:src="@drawable/backarrow"
 
             />
 
         <TextView
-            android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginStart="20dp"
             android:layout_toEndOf="@id/backarrow"
             android:fontFamily="@font/bungee"
-            android:text="About us"
+            android:text="Contact us"
             android:textColor="@color/black"
             android:textSize="23sp" />
     </RelativeLayout>
+
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-    <ImageView
 
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="255dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/aboutus" />
+            <ImageView
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:fontFamily="@font/antic"
-    android:textSize="17sp"
-    android:padding="10dp"
-    android:textStyle="bold"
-    android:textColor="@color/black"
-    android:text="From past 15 years BUS BOOKING SYSTEM is providing hassleless transportation services from Ahmedabad to CHARUSAT UNIVERSITY  with it's 10 buses and  4 Volvo buses. \n \nIt is well known for it's comfortability, punctuality and friendly staff. It has been chosen as one of the best travels according to student survey [2019]."/>
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="255dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/aboutus" />
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/antic"
-        android:textSize="17sp"
-        android:padding="10dp"
-        android:textStyle="bold"
-        android:autoLink="phone"
-        android:textColorLink="@color/blue"
-        android:textColor="@color/black"
-        android:textIsSelectable="true"
-        android:text="For more details contact : +91-8128812480\nManinagar ,\nAhmedabad-380008 " />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Developers"
-        android:textSize="24dp"
-        android:textAlignment="center"
-        android:fontFamily="@font/baloo"
-        android:textColor="@color/black"/>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-        <ImageView
-            android:id="@+id/nishitaboutus"
-            android:layout_width="117dp"
-            android:layout_height="139dp"
-
-            android:src="@drawable/nishitaboutus" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/antic"
+                android:padding="10dp"
+                android:text="From past 15 years BUS BOOKING SYSTEM is providing hassleless transportation services from Ahmedabad to CHARUSAT UNIVERSITY  with it's 10 buses and  4 Volvo buses. \n \nIt is well known for it's comfortability, punctuality and friendly staff. It has been chosen as one of the best travels according to student survey [2019]."
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
 
-
-        <TextView
-            android:id="@+id/nishit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/nishitaboutus"
-            android:layout_alignStart="@+id/nishitaboutus"
-            android:layout_alignEnd="@+id/nishitaboutus"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="-5dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="0dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/antic"
-            android:textAlignment="center"
-            android:text="Nishit Patel\n19IT105"/>
-       
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo"
+                android:text="Contact us"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="24dp" />
 
 
-    </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center">
 
+                <ImageView
+                    android:id="@+id/call"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:onClick="opencaller"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/call" />
+                <ImageView
+                    android:id="@+id/chaticon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_toStartOf="@+id/call"
+                    android:layout_marginRight="30dp"
+                    android:layout_centerHorizontal="true"
+
+                    android:src="@drawable/customerservice" />
+                <ImageView
+                    android:id="@+id/emailicon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_toEndOf="@+id/call"
+                    android:layout_marginStart="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:tag="@string/gmail_link"
+                    android:onClick="openbrowser"
+                    android:src="@drawable/gmail" />
+
+
+
+
+                <TextView
+                    android:id="@+id/calltext"
+                    android:layout_below="@+id/call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Call"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/antic"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/chaticon"
+                    android:layout_alignStart="@+id/chaticon"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/antic"
+                    android:src="@drawable/customerservice"
+                    android:text="Chat"
+                    android:textColor="@color/black"
+
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/emailicon"
+                    android:layout_below="@id/emailicon"
+                    android:layout_centerHorizontal="true"
+                    android:text="Email"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/antic"/>
+            </RelativeLayout>
 
         </LinearLayout>
+
+
     </ScrollView>
 
 </LinearLayout>

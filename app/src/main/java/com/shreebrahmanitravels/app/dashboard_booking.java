@@ -63,7 +63,7 @@ public class dashboard_booking extends Fragment {
     String currentday, currentmonth;
     String day_Monthstr, currentyear, busnofromdatabase;
     int date_, month_, year_;
-    Button serchbusbtn;
+    Button serchbusbtn , trackbus;
     Boolean bookingsecondtime = false;
     ImageView calenderimage;
     TextInputLayout outbox;
@@ -179,7 +179,8 @@ public class dashboard_booking extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 try {
-                final String lastbookeddate = new sessionmanager(requireContext()).getlastbookeddate();
+
+                final String lastbookeddate =  snapshot.child(username).child("lastbooked_date").getValue().toString();
 
 
                     if (!Objects.requireNonNull(snapshot.child(username).child("seat").child(lastbookeddate).child("seat ID").getValue()).toString().equals("null")) {
@@ -188,7 +189,7 @@ public class dashboard_booking extends Fragment {
                             refnew.removeEventListener(this);
                         }
                         //snapshot.child(username).child("seat").child().getValue().toString()
-
+                        trackbus.setVisibility(View.VISIBLE);
                         int date= Integer.parseInt(lastbookeddate.substring(0,2));
                         int month= Integer.parseInt(lastbookeddate.substring(3,5))-1;
                         int year= Integer.parseInt(lastbookeddate.substring(6,10));
@@ -263,12 +264,15 @@ public class dashboard_booking extends Fragment {
         dateonticket = v.findViewById(R.id.dateonticket);
         busrouteonticket = v.findViewById(R.id.busroutetextonticketedit);
         seatnumberonticket = v.findViewById(R.id.seatonticketedit);
-
+        trackbus=v.findViewById(R.id.trackbusbtn);
         recentbooktext.setVisibility(View.INVISIBLE);
         ticket.setVisibility(View.GONE);
         progressBar = v.findViewById(R.id.progressbarseatbooking);
 
         progressBar.setVisibility(View.INVISIBLE);
+        trackbus.setVisibility(View.INVISIBLE);
+
+
         refnew.addValueEventListener(listenerforticket);
 
         Calendar calendartommorw = Calendar.getInstance();
@@ -324,6 +328,7 @@ try
 
             }
         });
+
 
 
         serchbusbtn.setOnClickListener(new View.OnClickListener() {
@@ -459,6 +464,13 @@ try
 
         });
 
+        trackbus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(getActivity(),trackbus.class);
+                startActivity(intent);
+            }
+        });
 
         busroutetext.setOnClickListener(new View.OnClickListener() {
             @Override

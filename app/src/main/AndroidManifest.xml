@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".verifyotp_guestbooking"></activity>
+        <activity android:name=".trackbus"></activity>
+        <activity android:name=".verifyotp_guestbooking" />
         <activity android:name=".guestbooking" />
         <activity android:name=".guestwarning" />
         <activity

@@ -41,7 +41,7 @@ public class bookedsuccesfully extends AppCompatActivity {
 
         setContentView(R.layout.activity_bookedsuccesfully);
         gohome = findViewById(R.id.gohome_succesbook);
-        TextView sucesstext= findViewById(R.id.seatsucessmsg);
+        TextView sucesstext = findViewById(R.id.seatsucessmsg);
         gohome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,88 +54,87 @@ public class bookedsuccesfully extends AppCompatActivity {
         });
 
 
-
-        if(new sessionmanager(this).getuserdetail().equals("Guest user"))
+        if (new sessionmanager(this).getuserdetail().equals("Guest user"))
             sucesstext.setText("Your request is successfully submitted!\n We will contact you to your Registration mobile number on seat confirmation.");
-      else{
+        else {
 
-        AlertDialog dialog = null;
-        final AlertDialog.Builder alert = new AlertDialog.Builder(bookedsuccesfully.this);
+            AlertDialog dialog = null;
+            final AlertDialog.Builder alert = new AlertDialog.Builder(bookedsuccesfully.this);
 
-        LayoutInflater inflaterdialoge = this.getLayoutInflater();
-        alert.setView(inflaterdialoge.inflate(R.layout.errorbookingseat, null));
-        dialog = alert.create();
-        final String busroute = getIntent().getStringExtra("bus route");
-        dialog.setCanceledOnTouchOutside(true);
-        dialog.getWindow().setLayout(WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
+            LayoutInflater inflaterdialoge = this.getLayoutInflater();
+            alert.setView(inflaterdialoge.inflate(R.layout.errorbookingseat, null));
+            dialog = alert.create();
+            final String busroute = getIntent().getStringExtra("bus route");
+            dialog.setCanceledOnTouchOutside(true);
+            dialog.getWindow().setLayout(WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
 
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.getWindow().getAttributes().windowAnimations = android.R.style.Animation_Dialog;
-        final Handler handler = new Handler(Looper.getMainLooper());
-        final AlertDialog finalDialog = dialog;
+            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            dialog.getWindow().getAttributes().windowAnimations = android.R.style.Animation_Dialog;
+            final Handler handler = new Handler(Looper.getMainLooper());
+            final AlertDialog finalDialog = dialog;
 
-        final String username = new sessionmanager(this).getuserdetail();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+            final String username = new sessionmanager(this).getuserdetail();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
 
-                Calendar calendar = Calendar.getInstance();
-                calendar.add(Calendar.DAY_OF_MONTH, 1);
-                final Date datetommorow = calendar.getTime();
-                final String tommorowdate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(datetommorow);
-                String path = "Booking/" + tommorowdate + "/" + busroute + "/" + getIntent().getStringExtra("id") + "/username";
-                System.out.println(path);
-                final DatabaseReference ref = firebaseDatabase.getReference(path);
-                final DatabaseReference ref2 = firebaseDatabase.getReference("users");
-
-
-                ref.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        if (snapshot.getValue().toString().equals("null")) {
-
-                            ref2.child(username).child("seat").child(tommorowdate).child("busroute").setValue("null");
-                            ref2.child(username).child("seat").child(tommorowdate).child("seat ID").setValue("null");
-
-                            finalDialog.show();
-                            if (ref != null && this != null)
-                                ref.removeEventListener(this);
+                    Calendar calendar = Calendar.getInstance();
+                    calendar.add(Calendar.DAY_OF_MONTH, 1);
+                    final Date datetommorow = calendar.getTime();
+                    final String tommorowdate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(datetommorow);
+                    String path = "Booking/" + tommorowdate + "/" + busroute + "/" + getIntent().getStringExtra("id") + "/username";
+                    System.out.println(path);
+                    final DatabaseReference ref = firebaseDatabase.getReference(path);
+                    final DatabaseReference ref2 = firebaseDatabase.getReference("users");
 
 
-                        } else if (!snapshot.getValue().toString().equals(username)) {
-                            finalDialog.show();
+                    ref.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (snapshot.getValue().toString().equals("null")) {
 
-                            ref2.child(username).child("seat").child(tommorowdate).child("busroute").setValue("null");
-                            ref2.child(username).child("seat").child(tommorowdate).child("seat ID").setValue("null");
-                            if (ref != null && this != null)
-                                ref.removeEventListener(this);
+                                ref2.child(username).child("seat").child(tommorowdate).child("busroute").setValue("null");
+                                ref2.child(username).child("seat").child(tommorowdate).child("seat ID").setValue("null");
+
+                                finalDialog.show();
+                                if (ref != null && this != null)
+                                    ref.removeEventListener(this);
 
 
-                        } else {
-                            if (ref != null && this != null)
-                                ref.removeEventListener(this);
-sessionmanager sessionmanagerobj= new sessionmanager(getBaseContext());
-sessionmanagerobj.setlastbookeddate(tommorowdate);
+                            } else if (!snapshot.getValue().toString().equals(username)) {
+                                finalDialog.show();
+
+                                ref2.child(username).child("seat").child(tommorowdate).child("busroute").setValue("null");
+                                ref2.child(username).child("seat").child(tommorowdate).child("seat ID").setValue("null");
+                                if (ref != null && this != null)
+                                    ref.removeEventListener(this);
+
+
+                            } else {
+                                if (ref != null && this != null)
+                                    ref.removeEventListener(this);
+                                sessionmanager sessionmanagerobj = new sessionmanager(getBaseContext());
+                                sessionmanagerobj.setlastbookeddate(tommorowdate);
+                                ref2.child(username).child("lastbooked_date").setValue(tommorowdate);
+                            }
                         }
-                    }
 
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
 
-                    }
-                });
+                        }
+                    });
 
-            }
-        }, 1000);
-
-
-        Button tryagain = dialog.findViewById(R.id.tryagainonerrorpagebookingseat);
+                }
+            }, 1000);
 
 
+            Button tryagain = dialog.findViewById(R.id.tryagainonerrorpagebookingseat);
 
-}
+
+        }
 
     }
 
