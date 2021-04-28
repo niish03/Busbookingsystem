@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+   <item
+    android:id="@+id/car"
+    android:title="Car"
+    />
+    <item
+        android:id="@+id/bike"
+        android:title="Bike"
+        />
+    <item
+        android:id="@+id/bus"
+        android:title="Bus"
+        />
+    <item
+        android:id="@+id/other"
+        android:title="Others"
+        />
+
+</menu>

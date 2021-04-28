@@ -16,6 +16,12 @@
 
         app:cnb_iconColor="#F44336"/>
     <item
+        android:id="@+id/rideshare"
+        android:title="Rideshare"
+        android:icon="@drawable/carsharing"
+        app:cnb_iconColor="#134e6f"/>
+
+    <item
         android:id="@+id/profiletab"
         android:title="Profile"
         android:icon="@drawable/user"

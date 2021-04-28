@@ -13,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".trackbus"></activity>
+        <activity android:name=".otpverify_rideshare"></activity>
+        <activity android:name=".adding_vehicle" />
+        <activity android:name=".ui.mainchatbott" />
+        <activity android:name=".trackbus" />
         <activity android:name=".verifyotp_guestbooking" />
         <activity android:name=".guestbooking" />
         <activity android:name=".guestwarning" />

@@ -23,21 +23,18 @@ public class welcomePage extends AppCompatActivity {
     protected Boolean tohome = false;
     String usernameonprofile;
 
-       @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_page);
 
-        chipNavigationBar=findViewById(R.id.bottom_navigation_menu);
-        chipNavigationBar.setItemSelected(R.id.bottom_navigation_home,true);
+        chipNavigationBar = findViewById(R.id.bottom_navigation_menu);
+        chipNavigationBar.setItemSelected(R.id.bottom_navigation_home, true);
 
 
-
-
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragmant_container,new Dashboard_home()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragmant_container, new Dashboard_home()).commit();
         bottommenu();
-
 
 
     }
@@ -55,33 +52,37 @@ public class welcomePage extends AppCompatActivity {
         chipNavigationBar.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
             @Override
             public void onItemSelected(int i) {
-                Fragment fragment=null;
+                Fragment fragment = null;
 
-                switch (i){
+                switch (i) {
                     case R.id.bottom_navigation_home:
-                        fragment= new Dashboard_home();
+                        fragment = new Dashboard_home();
                         break;
 
                     case R.id.BookingTab:
-                        fragment= new dashboard_booking();
+                        fragment = new dashboard_booking();
                         break;
 
                     case R.id.profiletab:
-                        fragment= new dashboard_profile();
+                        fragment = new dashboard_profile();
                         break;
+                    case R.id.rideshare:
+                        fragment = new rideshare_homepage();
+                        break;
+                    default :
+                        break;
+
                 }
 
 
+                dashboard_profile fragobj = new dashboard_profile();
+                Bundle bundle = new Bundle();
+                bundle.putString("edttext", "From Activity");
 
-                    dashboard_profile fragobj = new dashboard_profile();
-                    Bundle bundle = new Bundle();
-                    bundle.putString("edttext", "From Activity");
-
-                    fragobj.setArguments(bundle);
-
+                fragobj.setArguments(bundle);
 
 
-                getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.fragment_fade_enter,R.anim.fragment_fade_exit).replace(R.id.fragmant_container,fragment).commit();
+                getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.fragment_fade_enter, R.anim.fragment_fade_exit).replace(R.id.fragmant_container, fragment).commit();
             }
         });
     }

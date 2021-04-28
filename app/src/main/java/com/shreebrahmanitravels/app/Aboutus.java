@@ -16,8 +16,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+
+import com.shreebrahmanitravels.app.ui.mainchatbott;
+
 public class Aboutus extends AppCompatActivity {
     ImageView backbtn;
+    ImageView chatbot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +29,22 @@ public class Aboutus extends AppCompatActivity {
         setContentView(R.layout.activity_aboutus);
 
         backbtn= findViewById(R.id.backarrow);
+        chatbot = findViewById(R.id.chaticon);
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
             }
         });
+
+        chatbot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Aboutus.this, mainchatbott.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override

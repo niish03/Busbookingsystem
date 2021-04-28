@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/antic"
                 android:padding="10dp"
-                android:text="From past 15 years BUS BOOKING SYSTEM is providing hassleless transportation services from Ahmedabad to CHARUSAT UNIVERSITY  with it's 10 buses and  4 Volvo buses. \n \nIt is well known for it's comfortability, punctuality and friendly staff. It has been chosen as one of the best travels according to student survey [2019]."
+                android:text="From past 15 years RideShare is providing hassleless transportation services from Ahmedabad to CHARUSAT UNIVERSITY  with it's 10 buses and  4 Volvo buses. \n \nIt is well known for it's comfortability, punctuality and friendly staff. It has been chosen as one of the best travels according to student survey [2019]."
                 android:textColor="@color/black"
                 android:textSize="17sp"
                 android:textStyle="bold" />
